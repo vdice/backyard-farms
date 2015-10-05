@@ -20,10 +20,11 @@
         <li>
           Logged in as {{session.currentUser.email}}
           <button {{action "signOut"}}>Sign out</button>
+          {{#link-to 'user' session.content.uid}}<button>Your Profile</button>{{/link-to}}
         </li>
       {{else}}
-        <li>{{login-modal method="signUp" signUp="signUp"}}</li>
-        <li>{{login-modal method="signIn" signIn="signIn"}}</li>
+        <li>{{login-modal method="signUp" signUp="signUp" showExtras=true}}</li>
+        <li>{{login-modal method="signIn" signIn="signIn" showExtras=false}}</li>
       {{/if}}
       <li><a href="#">Help</a></li>
     </ul>

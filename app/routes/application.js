@@ -21,6 +21,7 @@ export default Ember.Route.extend({
 
     signUp: function(params){
       this.set("firebase", new Firebase(config.firebase));
+      var self = this;
       this.get('firebase').createUser({
         email    : params.email,
         password : params.password
@@ -29,6 +30,14 @@ export default Ember.Route.extend({
           console.log("Error creating user:", error);
         } else {
           console.log("Successfully created user account with uid:", userData.uid);
+          debugger;
+          self.get('firebase').child("users").child(userData.uid).set({
+            firstName: params.firstName,
+            lastName: params.lastName,
+            email: params.email,
+            uid: userData.uid,
+            location: params.location
+          });
         }
       });
     },

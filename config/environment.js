@@ -4,7 +4,12 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'backyard-farms',
     environment: environment,
-    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    contentSecurityPolicy: {
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
+      'img-src': "'self'", 
+
+
+    },
     firebase: 'https://backyard-farms.firebaseio.com/',
     torii: {
       sessionServiceName: 'session'
