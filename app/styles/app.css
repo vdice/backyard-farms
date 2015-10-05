@@ -69,7 +69,7 @@
 .nav{
   height: 48px;
   background-color: lightgray;
-  background-image: url("http://www.myfreetextures.com/wp-content/uploads/2014/10/seamless-wood-background-1.jpg");
+  background-image: url("/img/woodbackground.jpg");
 }
 
 .search {
