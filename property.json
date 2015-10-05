@@ -1,0 +1,20 @@
+  { "properties": [{
+    "location": "New Zealand",
+    "type": "garden",
+    "features": ["good dirt", "chicken coop"],
+    "dates": "9/23/2015-12/31/2015",
+    "image": "http://theandrewagency.com/wp-content/uploads/2015/04/Farm1.jpg"
+  }, {
+    "location": "New Zealand",
+    "type": "garden",
+    "features": ["good dirt", "chicken coop"],
+    "dates": "9/23/2015-12/31/2015",
+    "image": "http://theandrewagency.com/wp-content/uploads/2015/04/Farm1.jpg"
+    }, {
+    "location": "New Zealand",
+    "type": "garden",
+    "features": ["good dirt", "chicken coop"],
+    "dates": "9/23/2015-12/31/2015",
+    "image": "http://theandrewagency.com/wp-content/uploads/2015/04/Farm1.jpg"
+      }]
+    }
