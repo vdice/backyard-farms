@@ -18,6 +18,7 @@ export default Ember.Route.extend({
     signOut: function() {
       this.get("session").close();
     },
+
     signUp: function(params){
       this.set("firebase", new Firebase(config.firebase));
       this.get('firebase').createUser({
@@ -31,7 +32,10 @@ export default Ember.Route.extend({
         }
       });
     },
+
     signIn: function(params){
+      this.set("firebase", new Firebase(config.firebase));
+      var self = this;
       this.get('firebase').authWithPassword({
         email    : params.email,
         password : params.password
@@ -40,6 +44,7 @@ export default Ember.Route.extend({
           console.log("Login Failed!", error);
         } else {
           console.log("Authenticated successfully with payload:", authData);
+          self.refresh();
         }
       });
     }

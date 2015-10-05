@@ -22,8 +22,8 @@
           <button {{action "signOut"}}>Sign out</button>
         </li>
       {{else}}
-        <li>{{sign-up signUp="signUp"}}</li>
-        <li>{{sign-in signIn="signIn"}}</li>
+        <li>{{login-modal method="signUp" signUp="signUp"}}</li>
+        <li>{{login-modal method="signIn" signIn="signIn"}}</li>
       {{/if}}
       <li><a href="#">Help</a></li>
     </ul>

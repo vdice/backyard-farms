@@ -1,13 +1,13 @@
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signIn">
-Sign In
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{method}}">
+{{get-title method}}
 </button>
 
-<div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id={{method}} tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Sign In</h4>
+        <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
       </div>
       <form>
         <div class="modal-body">
@@ -22,7 +22,7 @@ Sign In
         </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" {{action 'signIn'}}>Submit</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" {{action method}}>Submit</button>
       </div>
     </form>
     </div>

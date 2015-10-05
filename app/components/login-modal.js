@@ -9,6 +9,13 @@ export default Ember.Component.extend({
         password: this.get('password')
       }
       this.sendAction('signIn', params)
+    },
+    signUp: function(){
+      var params = {
+        email: this.get('email'),
+        password: this.get('password')
+      }
+      this.sendAction('signUp', params)
     }
   }
 });
