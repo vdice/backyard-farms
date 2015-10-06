@@ -6,5 +6,5 @@ export default DS.Model.extend({
   user: DS.belongsTo('user', {async:true}),
   dates: DS.attr(),
   features: DS.attr(),
-  image: DS.attr(),
+  images: DS.attr(),
 });

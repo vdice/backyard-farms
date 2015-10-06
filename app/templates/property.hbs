@@ -1,0 +1,25 @@
+<ul>
+  <li>Type: {{model.type}}</li>
+
+  <li>Location: {{model.location}}</li>
+
+  <li>
+    Features:
+    <ul>
+      {{#each model.features as |feature|}}
+        <li>{{feature}}</li>
+      {{/each}}
+    </ul>
+  </li>
+
+  <li>
+    Images:
+    <ul>
+      {{#each model.images as |image|}}
+        <li>
+          <img src={{image}}>
+        </li>
+      {{/each}}
+    </ul>
+  </li>
+</ul>

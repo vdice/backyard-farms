@@ -1,34 +1,34 @@
-<form>
-  <!-- <div class="btn-group" data-toggle="buttons"> -->
-    <!-- <label>Property Type:</label>
-    {{#radio-button value="Yard Space" groupValue= type}}Yard Space{{/radio-button}}
-    {{#radio-button value="Greenhouse" groupValue= type}}Greenhouse{{/radio-button}}
-    {{#radio-button value="Rooftop" groupValue= type}}Rooftop{{/radio-button}}
-  </div> -->
+{{#if session.isAuthenticated}}
 
-<h3>Type</h3>
-  {{radio-button name='propertyType' value='Yard Space' groupValue=type collectParams='collectParams'}}Yard Space
-  {{radio-button name='propertyType' value='Greenhouse' groupValue=type collectParams='collectParams'}}Greenhouse
-  {{radio-button name='propertyType' value='Rooftop' groupValue=type collectParams='collectParams'}}Rooftop
+  <form>
+    <h3>Type</h3>
+    {{radio-button name='propertyType' value='Yard Space' groupValue=type collectParams='collectParams'}}Yard Space
+    {{radio-button name='propertyType' value='Greenhouse' groupValue=type collectParams='collectParams'}}Greenhouse
+    {{radio-button name='propertyType' value='Rooftop' groupValue=type collectParams='collectParams'}}Rooftop
 
-<br>
-  <h3>Location</h3>
-  {{radio-button name='location' value='Portland' groupValue=type collectParams='collectParams'}}Portland
-  {{radio-button name='location' value='San Francisco' groupValue=type collectParams='collectParams'}}San Francisco
-  {{radio-button name='location' value='New York' groupValue=type collectParams='collectParams'}}New York
+    <br>
+    <h3>Location</h3>
+    {{radio-button name='location' value='Portland' groupValue=type collectParams='collectParams'}}Portland
+    {{radio-button name='location' value='San Francisco' groupValue=type collectParams='collectParams'}}San Francisco
+    {{radio-button name='location' value='New York' groupValue=type collectParams='collectParams'}}New York
 
-<br>
-  <h3>Features</h3>
-  {{checkbox-input name='features' value='Chickens' groupValue=type collectParams='collectParams'}}Chickens
-  {{checkbox-input name='features' value='Goats' groupValue=type collectParams='collectParams'}}Goats
-  {{checkbox-input name='features' value='Bees' groupValue=type collectParams='collectParams'}}Bees
+    <br>
+    <h3>Features</h3>
+    {{checkbox-input name='features' value='Chickens' groupValue=type collectParams='collectParams'}}Chickens
+    {{checkbox-input name='features' value='Goats' groupValue=type collectParams='collectParams'}}Goats
+    {{checkbox-input name='features' value='Bees' groupValue=type collectParams='collectParams'}}Bees
 
-  <button {{action 'addProperty'}}>Submit</button>
+    <h3>Upload Images of your Property</h3>
+    {{file-upload user=model uploadFile="uploadFile"}}
 
-</form>
+    <button {{action 'addProperty' model}}>Submit</button>
+  </form>
 
-
-
+{{else}}
+  <h3>You'll need to sign up/sign in first!</h3>
+  {{login-modal method="signUp" signUp="signUp" showExtras=true}}
+  {{login-modal method="signIn" signIn="signIn" showExtras=false}}
+{{/if}}
 
 
 <!-- {{outlet}} -->
