@@ -1,0 +1,30 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#property_{{property.id}}">
+  {{property.type}} in {{property.location}}
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="property_{{property.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">{{property.type}} in {{property.location}}</h4>
+      </div>
+      <div data-dismiss="modal">
+        {{#link-to 'property' property.id}}
+          <div class="modal-body">
+            <ul>
+              <li>
+                <img src={{property.images.firstObject}}>
+              </li>
+            </ul>
+          </div>
+        {{/link-to}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
