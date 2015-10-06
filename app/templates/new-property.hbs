@@ -8,9 +8,10 @@
 
     <br>
     <h3>Location</h3>
-    {{radio-button name='location' value='Portland' groupValue=type collectParams='collectParams'}}Portland
-    {{radio-button name='location' value='San Francisco' groupValue=type collectParams='collectParams'}}San Francisco
-    {{radio-button name='location' value='New York' groupValue=type collectParams='collectParams'}}New York
+
+    {{#each model.locations as |location|}}
+      {{radio-button name='location' value=location groupValue=type collectParams='collectParams'}}{{location.name}}
+    {{/each}}
 
     <br>
     <h3>Features</h3>
@@ -19,9 +20,9 @@
     {{checkbox-input name='features' value='Bees' groupValue=type collectParams='collectParams'}}Bees
 
     <h3>Upload Images of your Property</h3>
-    {{file-upload user=model uploadFile="uploadFile"}}
+    {{file-upload user=model.user uploadFile="uploadFile"}}
 
-    <button {{action 'addProperty' model}}>Submit</button>
+    <button {{action 'addProperty' model.user}}>Submit</button>
   </form>
 
 {{else}}

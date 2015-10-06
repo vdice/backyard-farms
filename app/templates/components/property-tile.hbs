@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#property_{{property.id}}">
-  {{property.type}} in {{property.location}}
+  {{property.type}} in {{property.location.name}}
 </button>
 
 <!-- Modal -->
@@ -9,7 +9,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">{{property.type}} in {{property.location}}</h4>
+        <h4 class="modal-title">{{property.type}} in {{property.location.name}}</h4>
       </div>
       <div data-dismiss="modal">
         {{#link-to 'property' property.id}}

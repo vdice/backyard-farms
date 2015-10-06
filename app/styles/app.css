@@ -20,6 +20,15 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.aboutVeg {
+  background-image:url('http://wwwgreeneridealcom.c.presscdn.com/wp-content/uploads/2012/03/organic-farming.jpg');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  text-shadow: 2px 2px black;
+}
 
 .jumbotron .container {
   position: relative;
@@ -92,7 +101,7 @@
 
 
 
-.portland{
+.Portland{
   border: solid 5px white;
   background-image:url('/img/portlandgarden.jpg');
   height: 160px;
@@ -103,7 +112,7 @@
   text-shadow: 2px 2px red;
 }
 
-.sanfrancisco{
+.Sanfrancisco{
   border: solid 5px white;
   background-image:url('/img/SanFranciscoVeggie.jpg');
   height: 160px;
@@ -114,7 +123,7 @@
   text-shadow: 2px 2px #b29600;
 }
 
-.seattle{
+.Seattle{
   border: solid 5px white;
   background-image:url('/img/SeattleVeggie.jpg');
   height: 160px;
@@ -125,7 +134,7 @@
   text-shadow: 3px 3px #000080;
 }
 
-.newyork{
+.Newyork{
   border: solid 5px white;
   background-image:url('/img/newyorkveggie.jpg');
   height: 160px;
@@ -135,7 +144,7 @@
   border-color: white;
   text-shadow: 2px 2px #000000;
 }
-.boston{
+.Boston{
   border: solid 5px white;
   background-image:url('/img/bostonveggie.jpg');
   height: 160px;
@@ -145,7 +154,7 @@
   border-color: white;
   text-shadow: 2px 2px #990000;
 }
-.denver{
+.Denver{
   border: solid 5px white;
   background-image:url('/img/denverveggie.jpg');
   height: 160px;
@@ -154,4 +163,22 @@
   text-align: center right;
   border-color: white;
   text-shadow: 2px 2px #FB4F14;
+}
+
+.property-image {
+  width: 300px;
+  height: 140px;
+  border: solid 4px gray;
+  padding: 0;
+}
+
+li{
+  list-style-type: none;
+  margin: 10px;
+  float: left;
+}
+
+.map-display {
+  height: 350px;
+  width: 350px;
 }
