@@ -1,1 +1,10 @@
-{{yield}}
+
+
+<ul>
+
+<div  class="col-md-12">
+  {{#each model.properties as |property|}}
+    <li><img class="property-image" src='{{property.image}}'></li>
+  {{/each}}
+</div>
+</ul>
