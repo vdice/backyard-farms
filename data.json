@@ -32,40 +32,40 @@
 
 "properties": [{
   "type": "garden",
-  "latitude": 45.522142, 
+  "latitude": 45.522142,
   "location":-122.682986,
   "features": ["good dirt", "chicken coop"],
   "dates": "9/23/2015-12/31/2015",
-  "image": "http://theandrewagency.com/wp-content/uploads/2015/04/Farm1.jpg"
+  "images": ["http://theandrewagency.com/wp-content/uploads/2015/04/Farm1.jpg"]
 }, {
   "type": "garden",
   "location":"0",
   "features": ["good dirt", "chicken coop"],
   "dates": "9/23/2015-12/31/2015",
-  "image": "http://theandrewagency.com/wp-content/uploads/2015/04/Farm1.jpg"
+  "images": ["http://theandrewagency.com/wp-content/uploads/2015/04/Farm1.jpg"]
 }, {
   "type": "garden",
   "location":"0",
   "features": ["good dirt", "chicken coop"],
   "dates": "9/23/2015-12/31/2015",
-  "image": "http://theandrewagency.com/wp-content/uploads/2015/04/Farm1.jpg"
+  "images": ["http://theandrewagency.com/wp-content/uploads/2015/04/Farm1.jpg"]
   }, {
   "type": "garden",
   "location":"0",
   "features": ["good dirt", "chicken coop"],
   "dates": "9/23/2015-12/31/2015",
-  "image": "http://theandrewagency.com/wp-content/uploads/2015/04/Farm1.jpg"
+  "images": ["http://theandrewagency.com/wp-content/uploads/2015/04/Farm1.jpg"]
   }, {
   "type": "garden",
   "location":"0",
   "features": ["good dirt", "chicken coop"],
   "dates": "9/23/2015-12/31/2015",
-  "image": "http://theandrewagency.com/wp-content/uploads/2015/04/Farm1.jpg"
+  "images": ["http://theandrewagency.com/wp-content/uploads/2015/04/Farm1.jpg"]
   }, {
   "type": "garden",
   "location":"0",
   "features": ["good dirt", "chicken coop"],
   "dates": "9/23/2015-12/31/2015",
-  "image": "http://theandrewagency.com/wp-content/uploads/2015/04/Farm1.jpg"
+  "images": ["http://theandrewagency.com/wp-content/uploads/2015/04/Farm1.jpg"]
   }]
 }

@@ -3,7 +3,7 @@
 <ul>
 <div  class="col-md-8">
   {{#each model.properties as |property|}}
-    <li><img class="property-image" src='{{property.image}}'></li>
+    {{property-tile property=property}}
   {{/each}}
 </div>
 </ul>

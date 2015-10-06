@@ -6,7 +6,6 @@ module.exports = function(environment) {
     environment: environment,
     contentSecurityPolicy: {
       'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
-      'img-src': "'self'",
       'default-src': "'none'",
       'script-src': "'self' 'unsafe-eval' https://*.firebaseio.com https://*.googleapis.com https://*.gstatic.com",
       'font-src': "'self' https://*.gstatic.com",
@@ -14,8 +13,6 @@ module.exports = function(environment) {
       'img-src': "'self' *",
       'style-src': "'self' 'unsafe-inline' https://*.googleapis.com",
       'frame-src': "'self' https://*.firebaseio.com"
-
-
     },
     firebase: 'https://backyard-farms.firebaseio.com/',
     torii: {

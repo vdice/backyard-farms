@@ -6,5 +6,6 @@ export default DS.Model.extend({
   email: DS.attr(),
   uid: DS.attr(),
   location: DS.attr(),
-  avatar: DS.attr()
+  avatar: DS.attr(),
+  properties: DS.hasMany('property', {async:true})
 });

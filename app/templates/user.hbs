@@ -1,2 +1,19 @@
 {{outlet}}
+
+<h3>
+  {{model.firstName}} {{model.lastName}}<br>
+  <small>email: {{model.email}}</small>
+  <small>based in: {{model.location}}</small>
+</h3>
+
+<img src={{model.avatar}} alt={{model.email}} />
+
+<h3>Upload Avatar Image:</h3>
 {{file-upload user=model uploadFile="uploadFile"}}
+
+<h3>Properties:</h3>
+<ul>
+  {{#each model.properties as |property|}}
+    {{property-tile property=property}}
+  {{/each}}
+</ul>
