@@ -12,7 +12,7 @@ module.exports = function(environment) {
       'connect-src': "'self' wss://*.firebaseio.com",
       'img-src': "'self' *",
       'style-src': "'self' 'unsafe-inline' https://*.googleapis.com",
-      'frame-src': "'self' https://*.firebaseio.com"
+      'frame-src': "'self' https://*.firebaseio.com https://www.google.com"
     },
     firebase: 'https://backyard-farms.firebaseio.com/',
     torii: {
