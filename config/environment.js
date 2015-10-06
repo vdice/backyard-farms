@@ -6,9 +6,9 @@ module.exports = function(environment) {
     environment: environment,
     contentSecurityPolicy: {
       'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
-      'img-src': "'self'", 
-
-
+      'img-src': "'self'",
+      'font-src': "'http://fonts.gstatic.com'",
+      'style-src': "'self' 'unsafe-inline' 'http://fonts.googleapis.com'",
     },
     firebase: 'https://backyard-farms.firebaseio.com/',
     torii: {
