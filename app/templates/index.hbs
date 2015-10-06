@@ -3,7 +3,7 @@
       <div class="container">
         <h1>Weed It And Reap</h1>
         <p>Connect with those in your community with gardening space</p>
-        <a href="#">Learn More</a>
+        {{#link-to 'about'}}Learn More{{/link-to}}
       </div>
     </div>
   <div class="neighborhood-guides">
@@ -11,33 +11,9 @@
         <h2>Gardening Cities</h2>
         <p>Explore Cities That We Are Active In</p>
       <div class="row">
-
-          <div class="col-md-4">
-            <div class="jumbotron portland">
-              <h3>Portland</h3>
-            </div>
-            <div class="jumbotron sanfrancisco">
-              <h3>San Francisco</h3>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="jumbotron seattle">
-              <h3>Seattle</h3>
-            </div>
-            <div class="jumbotron newyork">
-              <h3>New York</h3>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="jumbotron boston">
-              <h3>Boston</h3>
-            </div>
-            <div class="jumbotron denver">
-              <h3>Denver</h3>
-            </div>
-          </div>
+        {{#each model.locations as |location|}}
+          {{city-tile location=location}}
+        {{/each}}
       </div>
     </div>
   </div>

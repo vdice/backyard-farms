@@ -5,6 +5,9 @@ export default Ember.Route.extend({
     return this.get("session").fetch().catch(function() {});
   },
   model() {
-    return this.store.findAll('user');
+    return Ember.RSVP.hash({
+      users: this.store.findAll('user'),
+      locations: this.store.findAll('location')
+    });
   }
 });
