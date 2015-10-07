@@ -18,9 +18,10 @@ export default Ember.Component.extend({
         type: this.collectedParams.propertyType,
         user: user,
         dates: new Date(),
-        features: this.collectedParams.features,
+        features: this.collectedParams.features || [],
         images: this.collectedParams.images ? this.collectedParams.images : [],
         address: this.get('address'),
+        description: this.get('description'),
         lat: 0,
         lng: 0
       };

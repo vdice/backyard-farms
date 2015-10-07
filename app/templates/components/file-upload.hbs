@@ -1,3 +1,8 @@
 {{yield}}
+{{#if uploadButton}}
+<p>Photo Uploaded</p><button class="btn btn-danger"{{action 'addAnother'}}>Upload Another Image</button>
+
+{{else}}
 {{input id="img-upload" type="file" accept="image/*"}}<br>
-<button {{action 'uploadFile' user}}>Upload</button>
+<button class="btn btn-warning" {{action 'uploadFile' user}}>Upload</button>
+{{/if}}

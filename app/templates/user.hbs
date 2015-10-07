@@ -1,21 +1,30 @@
 {{outlet}}
+<div class="container">
+  <div class="row">
+      <h3>
+        <legend><center>{{model.firstName}} {{model.lastName}}<br>
+        </center></legend>
+      </h3>
+    <div class="col-md-6 jumbotron userInfo">
+      <legend><small>email: {{model.email}}</small><br></legend>
+      <legend><small>based in: {{model.location}}</small></legend>
 
-<h3>
-  {{model.firstName}} {{model.lastName}}<br>
-  <small>email: {{model.email}}</small>
-  <small>based in: {{model.location}}</small>
-</h3>
+    <h3>Properties:</h3>
+    <ul>
+      {{#each model.properties as |property|}}
+        {{property-tile property=property}}
+        {{#link-to 'edit-property' property.id}}<span class="glyphicon glyphicon-pencil"></span>{{/link-to}}
+        <span class="glyphicon glyphicon-trash" {{action 'deleteProperty' model property}}></span>
+      {{/each}}
+    </ul>
 
-<img src={{model.avatar}} alt={{model.email}} />
-
-<h3>Upload Avatar Image:</h3>
-{{file-upload user=model uploadFile="uploadFile"}}
-
-<h3>Properties:</h3>
-<ul>
-  {{#each model.properties as |property|}}
-    {{property-tile property=property}}
-    {{#link-to 'edit-property' property.id}}<span class="glyphicon glyphicon-pencil"></span>{{/link-to}}
-    <span class="glyphicon glyphicon-trash" {{action 'deleteProperty' model property}}></span>
-  {{/each}}
-</ul>
+      <div class="col-md-6 avatar">
+        <img src={{model.avatar}} alt={{model.email}} />
+        <div class="upload-avatar">
+          <h5>Upload Avatar Image:</h5>
+          {{file-upload user=model uploadFile="uploadFile"}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

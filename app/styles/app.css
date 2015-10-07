@@ -1,3 +1,8 @@
+body {
+  background-color: #F8F8F8;
+  font-family: 'Raleway', sans-serif;
+}
+
 .nav a {
   color: white;
   font-size: 11px;
@@ -19,6 +24,9 @@
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.basket p{
+  color: white;
 }
 .aboutVeg {
   background-image:url('http://wwwgreeneridealcom.c.presscdn.com/wp-content/uploads/2012/03/organic-farming.jpg');
@@ -42,7 +50,7 @@
   font-weight: bold;
 }
 
-.jumbotron p {
+.aboutVeg p {
   font-size: 20px;
   color: #fff;
 }
@@ -109,7 +117,7 @@
   color: white;
   text-align: center right;
   border-color: white;
-  text-shadow: 2px 2px red;
+  text-shadow: 2px 2px yellow;
 }
 
 .Sanfrancisco{
@@ -131,7 +139,7 @@
   color: white;
   text-align: center right;
   border-color: white;
-  text-shadow: 3px 3px #000080;
+  text-shadow: 2px 2px #000080;
 }
 
 .Newyork{
@@ -181,6 +189,58 @@ li{
 .map-display {
   height: 350px;
   width: 350px;
+}
+
+.property-images img{
+  max-width: 500px;
+  max-height: 332px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+}
+
+.property-images {
+
+}
+
+.avatar img{
+  width: 500px;
+  height: 332px;
+  border-radius: 5px;
+}
+
+.avatar {
+  /*float: right;*/
+}
+
+.upload-avatar {
+  float: right;
+}
+
+.information{
+  background-color: white;
+  margin: 27px;
+}
+.userInfo{
+  background-color: white;
+}
+.modalStyle{
+  color: black;
+}
+
+.modalStyle img{
+  border-radius: 5px;
+}
+
+.feature {
+  border: solid black 2px;
+  border-radius: 5px;
+  padding: 2px;
+  background-color: darkgreen;
+  color: white;
+}
+.garden p{
+  font-size: 2em;
 }
 
 #map {

@@ -1,12 +1,12 @@
+<div class="container">
 {{#if session.isAuthenticated}}
-
-{{property-form user=model.user locations=model.locations addProperty="addProperty"}}
-
+  {{property-form user=model.user locations=model.locations addProperty="addProperty"}}
 {{else}}
   <h3>You'll need to sign up/sign in first!</h3>
   {{login-modal method="signUp" signUp="signUp" showExtras=true}}
   {{login-modal method="signIn" signIn="signIn" showExtras=false}}
 {{/if}}
 
+</div>
 
 <!-- {{outlet}} -->
