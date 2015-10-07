@@ -251,3 +251,7 @@ li{
 .glyphicon{
   cursor: pointer;
 }
+
+div{
+  display: inline-block;
+}

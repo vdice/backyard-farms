@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4 jumbotron information">
+    <div class="col-sm-5 col-sm-offset-1 col-md-7 col-md-offset-1 jumbotron">
       <legend><h3><strong>Type</strong>: {{model.type}}</h3></legend>
       {{model.description}}
 
@@ -13,7 +13,7 @@
       </div>
     </div>
     <br>
-    <div class="col-md-4 property-images" >
+    <div class="col-sm-6 col-md-4 property-images" >
       <ul>
         {{#each model.images as |image|}}
           <li>
@@ -21,6 +21,8 @@
           </li>
         {{/each}}
       </ul>
+      
+      {{property-map model=model}}
     </div>
   </div>
 </div>

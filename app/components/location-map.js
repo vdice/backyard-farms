@@ -17,6 +17,9 @@ export default Ember.Component.extend({
             map: map,
             title: property.get('type'),
           });
+          marker.addListener('click', function() {
+            $('#property_' + property.id).modal({ show: 'true'});
+          });
         });
       }
     }
