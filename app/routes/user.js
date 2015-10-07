@@ -6,6 +6,7 @@ export default Ember.Route.extend({
   },
   actions: {
     uploadFile(user, base64Img){
+    debugger;
       user.set('avatar', base64Img);
       user.save();
       this.transitionTo('user', user.id);

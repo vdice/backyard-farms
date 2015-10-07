@@ -9,4 +9,6 @@ export default DS.Model.extend({
   dates: DS.attr(),
   features: DS.attr(),
   images: DS.attr(),
+  ratings: DS.attr(),
+  description: DS.attr()
 });

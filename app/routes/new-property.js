@@ -26,8 +26,11 @@ export default Ember.Route.extend({
         type: collectedParams.propertyType,
         user: user,
         dates: new Date(),
+        description: collectedParams.description,
         features: collectedParams.features,
-        images: collectedParams.images ? collectedParams.images : []
+        images: collectedParams.images ? collectedParams.images : [],
+        ratings: []
+      // debugger;
       };
 
       var newProperty = this.store.createRecord('property', params);

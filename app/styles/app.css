@@ -1,3 +1,8 @@
+body {
+  background-color: #F8F8F8;
+  font-family: 'Raleway', sans-serif;
+}
+
 .nav a {
   color: white;
   font-size: 11px;
@@ -182,3 +187,28 @@ li{
   height: 350px;
   width: 350px;
 }
+
+.property-images {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.avatar img{
+  width: 500px;
+  height: 332px;
+  border-radius: 5px;
+}
+
+.avatar {
+  /*float: right;*/
+}
+
+.upload-avatar {
+  float: right;
+}
+
+/*.feature {
+  display: inline-block;
+  float: right;
+}*/

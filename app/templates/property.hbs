@@ -1,19 +1,17 @@
-<ul>
-  <li>Type: {{model.type}}</li>
+<div class="row">
+  <div class="col-md-4">
+    <legend><h3><strong>Type</strong>: {{model.type}}</h3></legend>
+    {{model.description}}
 
-  <li>Location: {{#link-to 'location' model.location.id}}{{model.location.name}}{{/link-to}}</li>
-
-  <li>
-    Features:
-    <ul>
-      {{#each model.features as |feature|}}
-        <li>{{feature}}</li>
-      {{/each}}
-    </ul>
-  </li>
-
-  <li>
-    Images:
+    <legend><h3><strong>Location:</strong> {{#link-to 'location' model.location.id}}{{model.location.name}}{{/link-to}}</h3></legend>
+    <div class="features">
+      <strong>Features:</strong>
+        {{#each model.features as |feature|}}
+          <span class="feature">{{feature}}</span>
+        {{/each}}
+    </div>
+  </div>
+  <div class="col-md-4 property-images" >
     <ul>
       {{#each model.images as |image|}}
         <li>
@@ -21,5 +19,5 @@
         </li>
       {{/each}}
     </ul>
-  </li>
-</ul>
+  </div>
+</div>
