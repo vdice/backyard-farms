@@ -10,6 +10,11 @@ export default Ember.Route.extend({
       user.set('avatar', base64Img);
       user.save();
       this.transitionTo('user', user.id);
+    },
+    deleteProperty(user, property){
+      property.destroyRecord();
+      user.save().catch(e => {console.log(e.errors)});
+      this.transitionTo('user', user.id)
     }
   }
 });

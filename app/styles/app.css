@@ -242,3 +242,12 @@ li{
 .garden p{
   font-size: 2em;
 }
+
+#map {
+  height: 350px;
+  width: 350px;
+}
+
+.glyphicon{
+  cursor: pointer;
+}

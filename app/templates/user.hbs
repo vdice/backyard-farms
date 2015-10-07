@@ -9,19 +9,21 @@
       <legend><small>email: {{model.email}}</small><br></legend>
       <legend><small>based in: {{model.location}}</small></legend>
 
+    <h3>Properties:</h3>
+    <ul>
+      {{#each model.properties as |property|}}
+        {{property-tile property=property}}
+        {{#link-to 'edit-property' property.id}}<span class="glyphicon glyphicon-pencil"></span>{{/link-to}}
+        <span class="glyphicon glyphicon-trash" {{action 'deleteProperty' model property}}></span>
+      {{/each}}
+    </ul>
 
-      <h3>Properties:</h3>
-      <ul>
-        {{#each model.properties as |property|}}
-          <li>{{property-tile property=property}}</li>
-        {{/each}}
-      </ul>
-    </div>
-    <div class="col-md-6 avatar">
-      <img src={{model.avatar}} alt={{model.email}} />
-      <div class="upload-avatar">
-        <h5>Upload Avatar Image:</h5>
-        {{file-upload user=model uploadFile="uploadFile"}}
+      <div class="col-md-6 avatar">
+        <img src={{model.avatar}} alt={{model.email}} />
+        <div class="upload-avatar">
+          <h5>Upload Avatar Image:</h5>
+          {{file-upload user=model uploadFile="uploadFile"}}
+        </div>
       </div>
     </div>
   </div>
