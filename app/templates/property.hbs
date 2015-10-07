@@ -1,23 +1,26 @@
-<div class="row">
-  <div class="col-md-4">
-    <legend><h3><strong>Type</strong>: {{model.type}}</h3></legend>
-    {{model.description}}
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 jumbotron information">
+      <legend><h3><strong>Type</strong>: {{model.type}}</h3></legend>
+      {{model.description}}
 
-    <legend><h3><strong>Location:</strong> {{#link-to 'location' model.location.id}}{{model.location.name}}{{/link-to}}</h3></legend>
-    <div class="features">
-      <strong>Features:</strong>
-        {{#each model.features as |feature|}}
-          <span class="feature">{{feature}}</span>
-        {{/each}}
+      <legend><h3><strong>Location:</strong> {{#link-to 'location' model.location.id}}{{model.location.name}}{{/link-to}}</h3></legend>
+      <div class="features">
+        <h3>Features:</h3>
+          {{#each model.features as |feature|}}
+            <span class="feature">{{feature}}</span>
+          {{/each}}
+      </div>
     </div>
-  </div>
-  <div class="col-md-4 property-images" >
-    <ul>
-      {{#each model.images as |image|}}
-        <li>
-          <img src={{image}}>
-        </li>
-      {{/each}}
-    </ul>
+    <br>
+    <div class="col-md-4 property-images" >
+      <ul>
+        {{#each model.images as |image|}}
+          <li>
+            <img src={{image}}>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
   </div>
 </div>

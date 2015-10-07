@@ -10,5 +10,4 @@ export default DS.Model.extend({
   features: DS.attr(),
   images: DS.attr(),
   ratings: DS.attr(),
-  description: DS.attr()
 });

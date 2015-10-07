@@ -5,15 +5,15 @@
         <legend><center>{{model.firstName}} {{model.lastName}}<br>
         </center></legend>
       </h3>
-    <div class="col-md-6 jumbotron">
-      <small>email: {{model.email}}</small><br>
-      <small>based in: {{model.location}}</small>
+    <div class="col-md-6 jumbotron userInfo">
+      <legend><small>email: {{model.email}}</small><br></legend>
+      <legend><small>based in: {{model.location}}</small></legend>
 
 
       <h3>Properties:</h3>
       <ul>
         {{#each model.properties as |property|}}
-          {{property-tile property=property}}
+          <li>{{property-tile property=property}}</li>
         {{/each}}
       </ul>
     </div>
