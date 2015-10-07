@@ -12,30 +12,30 @@ export default Ember.Component.extend({
       this.collectedParams['images'] ? this.collectedParams['images'].push(base64Img) : this.collectedParams['images'] = [base64Img];
     },
 
-    addProperty(user) {
+    editProperty(property) {
       var params = {
         location: this.collectedParams.location,
         type: this.collectedParams.propertyType,
-        user: user,
-        dates: new Date(),
-        features: this.collectedParams.features,
+        features: this.collectedParams.features || [],
         images: this.collectedParams.images ? this.collectedParams.images : [],
         address: this.get('address'),
-        lat: 0,
-        lng: 0
       };
 
       var self = this;
-      $.ajax({
-        url: 'https://maps.googleapis.com/maps/api/geocode/json',
-        type: 'GET',
-        data: 'address=' + params.address.replace(/\s/g,'+') + '&key=AIzaSyAy1AZgshJ0GIrIZK4-k8Awvnf_m2CrgdA',
-        success: function(result) {
-          params.lat = result.results[0].geometry.location.lat;
-          params.lng = result.results[0].geometry.location.lng;
-          self.sendAction('addProperty', params);
-          }
-      });
+      if (params.address){
+        $.ajax({
+          url: 'https://maps.googleapis.com/maps/api/geocode/json',
+          type: 'GET',
+          data: 'address=' + params.address.replace(/\s/g,'+') + '&key=AIzaSyAy1AZgshJ0GIrIZK4-k8Awvnf_m2CrgdA',
+          success: function(result) {
+            params.lat = result.results[0].geometry.location.lat;
+            params.lng = result.results[0].geometry.location.lng;
+            self.sendAction('editProperty', params, property);
+            }
+        });
+      } else {
+        self.sendAction('editProperty', params, property);
+      }
     }
   }
 });

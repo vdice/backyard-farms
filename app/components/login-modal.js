@@ -16,7 +16,8 @@ export default Ember.Component.extend({
         lastName: this.get('lastName'),
         location: this.get('location'),
         email: this.get('email'),
-        password: this.get('password')
+        password: this.get('password'),
+        avatar: ""
       }
       this.sendAction('signUp', params)
     }

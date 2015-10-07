@@ -50,6 +50,7 @@ export default Ember.Route.extend({
             lastName: params.lastName,
             email: params.email,
             uid: userData.uid,
+            avatar: params.avatar,
             location: params.location
           });
           // automatically sign in user
