@@ -1,0 +1,36 @@
+<div class="container">
+  <form>
+    <div class="form-group">
+      <h3>Type</h3>
+      {{radio-button name='propertyType' value='Yard Space' groupValue=type collectParams='collectParams'}}Yard Space
+      {{radio-button name='propertyType' value='Greenhouse' groupValue=type collectParams='collectParams'}}Greenhouse
+      {{radio-button name='propertyType' value='Rooftop' groupValue=type collectParams='collectParams'}}Rooftop
+    </div>
+
+    <div class="form-group">
+      <h3>Location</h3>
+      {{#each locations as |location|}}
+        {{radio-button name='location' value=location groupValue=type collectParams='collectParams'}}{{location.name}}
+      {{/each}}
+    </div>
+
+    <div class="form-group">
+      <h3>Address</h3>
+      {{input value=address class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <h3>Features</h3>
+      {{checkbox-input name='features' value='Chickens' groupValue=type collectParams='collectParams'}}Chickens
+      {{checkbox-input name='features' value='Goats' groupValue=type collectParams='collectParams'}}Goats
+      {{checkbox-input name='features' value='Bees' groupValue=type collectParams='collectParams'}}Bees
+    </div>
+
+    <div class="form-group">
+      <h3>Upload Images of your Property</h3>
+      {{file-upload user=model.user uploadFile="uploadFile"}}
+    </div>
+
+    <button {{action 'addProperty' user}}>Submit</button>
+  </form>
+</div>

@@ -182,3 +182,12 @@ li{
   height: 350px;
   width: 350px;
 }
+
+#map {
+  height: 350px;
+  width: 350px;
+}
+
+.glyphicon{
+  cursor: pointer;
+}

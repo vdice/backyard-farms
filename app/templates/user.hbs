@@ -15,5 +15,7 @@
 <ul>
   {{#each model.properties as |property|}}
     {{property-tile property=property}}
+    {{#link-to 'edit-property' property.id}}<span class="glyphicon glyphicon-pencil"></span>{{/link-to}}
+    <span class="glyphicon glyphicon-trash" {{action 'deleteProperty' model property}}></span>
   {{/each}}
 </ul>
