@@ -1,43 +1,30 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  map: Ember.inject.service('google-map'),
-
   actions: {
-    showMap(propertyLocation) {
-      // debugger;
-      // var options = {
-      //   latitude: location.get('latitude'),
-      //   longitude: location.get('longitude'),
-      // };
-      // var map = new google.maps.Map(document.getElementById('map'), {
-      //   zoom: 4,
-      //   center: {lat: -25.363, lng: 131.044},
-      // });
+    showMap(model) {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: {lat: model.get('lat'), lng: model.get('lng')}
+      });
+      setMarkers(map);
 
-      // var container = this.$('.map-display')[0];
-      //
-      // this.get('map').findMap(container, options);
-
-      function initMap(model) {
-        debugger;
-        var lat = model.properties.first.latitude;
-        var lng = model.properties.first.longitude;
-
-        var myLatLng = {lat: lat, lng: lng};
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: myLatLng
-        });
-
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'Hello World!'
-        });
+      function setMarkers(map) {
+        var beaches = [
+          ['Bondi Beach', -33.890542, 151.274856],
+          ['Coogee Beach', -33.923036, 151.259052],
+          ['Cronulla Beach', -34.028249, 151.157507],
+          ['Manly Beach', -33.80010128657071, 151.28747820854187],
+          ['Maroubra Beach', -33.950198, 151.259302]
+        ];
+        beaches.forEach(function(beach){
+          var marker = new google.maps.Marker({
+            position: {lat: beach[1], lng: beach[2]},
+            map: map,
+            title: beach[0],
+          });
+        })
       }
-      initMap();
     }
   }
 });
