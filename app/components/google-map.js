@@ -7,23 +7,17 @@ export default Ember.Component.extend({
         zoom: 10,
         center: {lat: model.get('lat'), lng: model.get('lng')}
       });
-      setMarkers(map);
+      setMarkers(map, model);
 
-      function setMarkers(map) {
-        var beaches = [
-          ['Bondi Beach', -33.890542, 151.274856],
-          ['Coogee Beach', -33.923036, 151.259052],
-          ['Cronulla Beach', -34.028249, 151.157507],
-          ['Manly Beach', -33.80010128657071, 151.28747820854187],
-          ['Maroubra Beach', -33.950198, 151.259302]
-        ];
-        beaches.forEach(function(beach){
+      function setMarkers(map, model) {
+        model.get('properties').forEach(function(property){
           var marker = new google.maps.Marker({
-            position: {lat: beach[1], lng: beach[2]},
+            position: {lat: property.get('lat'), lng: property.get('lng')},
+            animation: google.maps.Animation.DROP,
             map: map,
-            title: beach[0],
+            title: property.get('type'),
           });
-        })
+        });
       }
     }
   }
