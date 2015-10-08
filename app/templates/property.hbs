@@ -1,6 +1,11 @@
+
 <div class="container">
   <div class="row">
-    <div class="col-md-8 jumbotron information">
+    <h3>
+      <strong><legend><center>{{model.address}}<br>
+      </center></legend></strong>
+    </h3>
+    <div class="jumbotron information" class="col-md-6">
       <legend><h3><strong>Type</strong>: {{model.type}}</h3></legend>
 
     {{description-compon model=model}}
@@ -12,17 +17,39 @@
             <span class="feature">{{feature}}</span>
           {{/each}}
       </div>
-      {{calendar-tile}}
     </div>
     <br>
-    <div class="col-md-4 property-images" >
-      <ul>
-        {{#each model.images as |image|}}
-          <li>
+    {{carousel-component images=model.images}}
+
+      <!-- <div id="property-images" class="col-md-6" >
+
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+          </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src={{model.images}}>
+                </div>
+              {{#each model.images as |image|}}
+                <div class="item">
+                  <img src={{image}}>
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        </div> -->
+        <br>
+         {{calendar-tile}}
+       </div>
+     </div>
+
+
+
+
+          <!-- <li>
             <img src={{image}}>
-          </li>
-        {{/each}}
-      </ul>
-    </div>
-  </div>
-</div>
+          </li> -->
