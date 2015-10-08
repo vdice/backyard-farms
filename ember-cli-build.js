@@ -10,6 +10,9 @@ module.exports = function(defaults) {
   app.import('bower_components/moment/moment.js'),
   app.import('bower_components/fullcalendar/dist/fullcalendar.min.css');
   app.import('bower_components/fullcalendar/dist/fullcalendar.min.js');
+  app.import('bower_components/jt.timepicker/jquery.timepicker.js');
+  app.import('bower_components/jt.timepicker/jquery.timepicker.css');
+
 
   return app.toTree();
 };

@@ -11,23 +11,31 @@ Ember.run.schedule("afterRender", this, function() {
 				center: 'title',
 				right: 'month,agendaWeek,agendaDay'
 			},
-			defaultDate: '2015-02-12',
 			editable: false,
+      eventLimit: true,
+      theme: false,
       selectable: true,
 			selectHelper: true,
 			select: function(start, end) {
         var eventData = {};
         $('#newEvent').modal();
+        $('#event-startingDate').text(start.format('MMMM Do YYYY'));
+        $('#event-endingDate').text(end.format('MMMM Do YYYY'));
+        $('#event-startingTime').timepicker();
+        $('#event-endingTime').timepicker();
         $('#newEvent-submit').on('click', function(){
+          var startingTime = $('#event-startingTime').val()
+          var endingTime = $('#event-endingTime').val();
           eventData = {
             title: $('#event-userName').val(),
-            start: start,
-						end: end
+            start: moment(start.format('YYYY-MM-DD-') + startingTime, 'YYYY-MM-DD-h:mm:ssa'),
+						end: moment(end.format('YYYY-MM-DD-') + endingTime, 'YYYY-MM-DD-h:mm:ssa')
           }
+          debugger;
+          $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+  				$('#calendar').fullCalendar('unselect');
           // CREATE A NEW BOOKING EVENT IN THE DATABASE!
         });
-        $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
-				$('#calendar').fullCalendar('unselect');
 			},
 			events: [
 				{
@@ -37,7 +45,7 @@ Ember.run.schedule("afterRender", this, function() {
 					color: '#257e4a'
 				},
 
-				// areas where "Meeting" must be dropped
+				// denotes an acceptable booking area (maybe make the table light grey by default and the available booking times white?)
 				{
 					id: 'availableTime',
 					start: '2015-02-13',
