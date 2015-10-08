@@ -22,12 +22,8 @@
     <div class="col-md-6 avatar">
       <img src={{model.avatar}} alt={{model.email}} />
       <div class="upload-avatar">
-        {{#if showUploader}}
           <h5>Upload Avatar Image:</h5>
           {{file-upload user=model uploadFile="uploadFile"}}
-        {{else}}
-        <button class="btn btn-danger" {{action "showDaUpload"}}>Upload Profile Picture</button>
-        {{/if}}
       </div>
     </div>
   </div>

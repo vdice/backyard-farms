@@ -118,7 +118,7 @@ body {
   color: white;
   text-align: center right;
   border-color: white;
-  text-shadow: 2px 2px yellow;
+  text-shadow: 2px 2px black;
 }
 
 .Sanfrancisco{
@@ -129,7 +129,7 @@ body {
   color: white;
   text-align: center right;
   border-color: white;
-  text-shadow: 2px 2px #b29600;
+  text-shadow: 2px 2px black;
 }
 
 .Seattle{
@@ -140,7 +140,7 @@ body {
   color: white;
   text-align: center right;
   border-color: white;
-  text-shadow: 2px 2px #000080;
+  text-shadow: 2px 2px black;
 }
 
 .Newyork{
@@ -161,7 +161,7 @@ body {
   color: white;
   text-align: center right;
   border-color: white;
-  text-shadow: 2px 2px #990000;
+  text-shadow: 2px 2px black;
 }
 .Denver{
   border: solid 5px white;
@@ -171,7 +171,7 @@ body {
   color: white;
   text-align: center right;
   border-color: white;
-  text-shadow: 2px 2px #FB4F14;
+  text-shadow: 2px 2px black;
 }
 
 .property-image {
@@ -207,7 +207,7 @@ li{
 .avatar img{
   width: 500px;
   height: 332px;
-  border-radius: 5px;
+  border-radius: 40px;
 }
 
 .avatar {
@@ -273,4 +273,8 @@ li{
 
 .property-list legend{
   margin: 0px;
+}
+
+button.glyphicon {
+  border-radius: 10px;
 }

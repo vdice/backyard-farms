@@ -1,0 +1,5 @@
+{{#if readAll}}
+  {{model.description}}<button class="glyphicon glyphicon-minus btn-danger" {{action 'collapse'}}></button>
+{{else}}
+  {{cut-off model.description}}<button class="glyphicon glyphicon-plus btn-success" {{action 'expand'}}></button>
+{{/if}}
