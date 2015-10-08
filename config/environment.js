@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'backyard-farms',
     environment: environment,
     contentSecurityPolicy: {
-      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com https://*.googleapis.com/",
       'default-src': "'none'",
       'script-src': "'self' 'unsafe-eval' 'unsafe-inline' https://*.firebaseio.com https://*.googleapis.com https://*.gstatic.com",
       'font-src': "'self' https://*.gstatic.com",

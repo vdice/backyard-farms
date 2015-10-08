@@ -12,7 +12,6 @@ export default Ember.Route.extend({
     addProperty(params){
       var newProperty = this.store.createRecord('property', params);
       var self = this;
-      debugger;
       newProperty.save().then(function() {
         params.user.save().catch(e => {console.log(e.errors)});
         params.location.save();

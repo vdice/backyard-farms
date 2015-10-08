@@ -9,7 +9,7 @@ export default Ember.Component.extend({
     },
 
     uploadFile(user, base64Img){
-      this.collectedParams['images'] ? this.collectedParams['images'].push(base64Img) : this.collectedParams['images'] = [base64Img];
+      this.collectedParams['images'] !== null ? this.collectedParams['images'].push(base64Img) : this.collectedParams['images'] = [base64Img];
     },
 
     addProperty(user) {
@@ -18,25 +18,32 @@ export default Ember.Component.extend({
         type: this.collectedParams.propertyType,
         user: user,
         dates: new Date(),
-        features: this.collectedParams.features || [],
-        images: this.collectedParams.images ? this.collectedParams.images : [],
-        address: this.get('address'),
-        description: this.get('description'),
+        features: this.collectedParams.features || null,
+        images: this.collectedParams.images || null,
+        address: this.get('address') || null,
+        description: this.get('description') || null,
         lat: 0,
-        lng: 0
+        lng: 0,
+        reservations: 'test'
       };
 
+      debugger;
+
       var self = this;
-      $.ajax({
-        url: 'https://maps.googleapis.com/maps/api/geocode/json',
-        type: 'GET',
-        data: 'address=' + params.address.replace(/\s/g,'+') + '&key=AIzaSyAy1AZgshJ0GIrIZK4-k8Awvnf_m2CrgdA',
-        success: function(result) {
-          params.lat = result.results[0].geometry.location.lat;
-          params.lng = result.results[0].geometry.location.lng;
-          self.sendAction('addProperty', params);
-          }
-      });
+      if (params.address) {
+        $.ajax({
+          url: 'https://maps.googleapis.com/maps/api/geocode/json',
+          type: 'GET',
+          data: 'address=' + params.address.replace(/\s/g,'+') + '&key=AIzaSyAy1AZgshJ0GIrIZK4-k8Awvnf_m2CrgdA',
+          success: function(result) {
+            params.lat = result.results[0].geometry.location.lat;
+            params.lng = result.results[0].geometry.location.lng;
+            self.sendAction('addProperty', params);
+            }
+        });
+      } else {
+        self.sendAction('addProperty', params);
+      }
     }
   }
 });

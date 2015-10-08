@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('location', {path: '/location/:location_id'});
   this.route('about', {});
   this.route('edit-property', {path: '/property/:property_id/edit'});
+  this.route('book-property', {path: '/property/:property_id/book'});
 });
 
 export default Router;

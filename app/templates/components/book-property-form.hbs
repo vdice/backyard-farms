@@ -1,0 +1,14 @@
+<form>
+  <div class="form-group">
+    <label>User Name:</label>
+    {{input class="form-control" id="event-userName" value=user.fullName}}
+  </div>
+  <div class="form-group">
+    <label>Selected Dates:</label>
+    <p>From:</p>
+    {{input id="event-startingDate" value=event-startingDate}} at {{input id="event-startingTime" value=event-startingTime}}
+    <p>to:</p>
+    {{input id="event-endingDate" value=event-endingDate}} at {{input id="event-endingTime" value=event-endingTime}}
+  </div>
+  <button type="button" {{action 'bookProperty' property}}>Book Now!</button>
+</form>
