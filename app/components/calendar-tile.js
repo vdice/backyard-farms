@@ -39,29 +39,35 @@ Ember.run.schedule("afterRender", this, function() {
 			},
 			events: [
 				{
-					title: 'Lunch',
-					start: '2015-02-13T11:00:00',
-					constraint: 'availableTime', // defined below
-					color: '#257e4a'
+					title: 'Jake',
+					start: '2015-10-13T11:00:00',
+					end: '2015-10-17T11:00:00',
+          color: '#FF0000'
+				},
+				{
+					title: 'Jake',
+					start: '2015-10-01T11:00:00',
+					end: '2015-10-3T11:00:00',
+          color: '#FF0000'
 				},
 
 				// denotes an acceptable booking area (maybe make the table light grey by default and the available booking times white?)
-				{
-					id: 'availableTime',
-					start: '2015-02-13',
-					end: '2015-02-20',
-					rendering: 'background',
-          color: '#257e4a',
-				},
+				// {
+				// 	id: 'availableTime',
+				// 	start: '2015-02-13',
+				// 	end: '2015-02-20',
+				// 	rendering: 'background',
+        //   color: '#257e4a',
+				// },
 
 				// red areas where no events can be dropped
-				{
-					start: '2015-02-24',
-					end: '2015-02-28',
-					overlap: false,
-					rendering: 'background',
-					color: '#ff9f89'
-				}
+				// {
+				// 	start: '2015-02-24',
+				// 	end: '2015-02-28',
+				// 	overlap: false,
+				// 	rendering: 'background',
+				// 	color: '#ff9f89'
+				// }
 			]
 		});
 }); // After render
