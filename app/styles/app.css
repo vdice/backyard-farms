@@ -200,8 +200,9 @@ li{
   padding: 20px;
 }
 
-.property-images {
-
+#property-images {
+  margin: 0px;
+  display: inline-block;
 }
 
 .avatar img{
@@ -220,7 +221,6 @@ li{
 
 .information{
   background-color: white;
-  margin: 27px;
 }
 .userInfo{
   background-color: white;
@@ -277,4 +277,10 @@ li{
 
 button.glyphicon {
   border-radius: 10px;
+}
+
+
+.glassman{
+  max-height: 300px;
+  max-width: 350px;
 }
