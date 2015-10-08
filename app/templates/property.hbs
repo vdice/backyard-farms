@@ -1,9 +1,8 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4 jumbotron information">
+    <div class="col-md-8 jumbotron information">
       <legend><h3><strong>Type</strong>: {{model.type}}</h3></legend>
       {{model.description}}
-
       <legend><h3><strong>Location:</strong> {{#link-to 'location' model.location.id}}{{model.location.name}}{{/link-to}}</h3></legend>
       <div class="features">
         <h3>Features:</h3>
@@ -11,6 +10,7 @@
             <span class="feature">{{feature}}</span>
           {{/each}}
       </div>
+      {{calendar-tile}}
     </div>
     <br>
     <div class="col-md-4 property-images" >
