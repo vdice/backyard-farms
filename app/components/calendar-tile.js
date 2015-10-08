@@ -27,7 +27,7 @@ Ember.run.schedule("afterRender", this, function() {
           var startingTime = $('#event-startingTime').val()
           var endingTime = $('#event-endingTime').val();
           eventData = {
-            title: $('#event-userName').val(),
+            title: $('#event-userName').text(),
             start: moment(start.format('YYYY-MM-DD-') + startingTime, 'YYYY-MM-DD-h:mm:ssa'),
 						end: moment(end.format('YYYY-MM-DD-') + endingTime, 'YYYY-MM-DD-h:mm:ssa')
           }
