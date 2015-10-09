@@ -278,10 +278,16 @@ li{
 
 button.glyphicon {
   border-radius: 10px;
+
+}
+
+.car-button {
+  background-color: lightblue;
 }
 
 
 .glassman{
   max-height: 300px;
   max-width: 350px;
+  border-radius: 5px;
 }
