@@ -2,8 +2,8 @@
 <div class="container">
   <div class="row">
       <h3>
-        <legend><center>{{model.firstName}} {{model.lastName}}<br>
-        </center></legend>
+        <strong><legend><center>{{model.firstName}} {{model.lastName}}<br>
+        </center></legend></strong>
       </h3>
     <div class="col-md-6 jumbotron userInfo">
       <legend><small>email: {{model.email}}</small><br></legend>
@@ -17,13 +17,13 @@
         <span class="glyphicon glyphicon-trash" {{action 'deleteProperty' model property}}></span>
       {{/each}}
     </ul>
+  </div>
 
-      <div class="col-md-6 avatar">
-        <img src={{model.avatar}} alt={{model.email}} />
-        <div class="upload-avatar">
+    <div class="col-md-6 avatar">
+      <img src={{model.avatar}} alt={{model.email}} />
+      <div class="upload-avatar">
           <h5>Upload Avatar Image:</h5>
           {{file-upload user=model uploadFile="uploadFile"}}
-        </div>
       </div>
     </div>
   </div>

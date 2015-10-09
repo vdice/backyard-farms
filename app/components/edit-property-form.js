@@ -16,8 +16,8 @@ export default Ember.Component.extend({
       var params = {
         location: this.collectedParams.location,
         type: this.collectedParams.propertyType,
-        features: this.collectedParams.features || [],
-        images: this.collectedParams.images ? this.collectedParams.images : [],
+        features: this.collectedParams.features || null,
+        images: this.collectedParams.images || null,
         address: this.get('address'),
       };
 

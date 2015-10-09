@@ -15,8 +15,9 @@ body {
   display: inline;
 }
 
-.homer{
-  padding: 30px;
+#homer{
+  font-size: 1.5em;
+
 }
 
 .basket {
@@ -85,8 +86,8 @@ body {
 }
 .nav{
   height: 48px;
-  background-color: lightgray;
-  background-image: url("/img/woodbackground.jpg");
+  background-color: #323232;
+  /*background-image: url("/img/woodbackground.jpg");*/
 }
 
 .search {
@@ -117,7 +118,7 @@ body {
   color: white;
   text-align: center right;
   border-color: white;
-  text-shadow: 2px 2px yellow;
+  text-shadow: 2px 2px black;
 }
 
 .Sanfrancisco{
@@ -128,7 +129,7 @@ body {
   color: white;
   text-align: center right;
   border-color: white;
-  text-shadow: 2px 2px #b29600;
+  text-shadow: 2px 2px black;
 }
 
 .Seattle{
@@ -139,7 +140,7 @@ body {
   color: white;
   text-align: center right;
   border-color: white;
-  text-shadow: 2px 2px #000080;
+  text-shadow: 2px 2px black;
 }
 
 .Newyork{
@@ -160,7 +161,7 @@ body {
   color: white;
   text-align: center right;
   border-color: white;
-  text-shadow: 2px 2px #990000;
+  text-shadow: 2px 2px black;
 }
 .Denver{
   border: solid 5px white;
@@ -170,7 +171,7 @@ body {
   color: white;
   text-align: center right;
   border-color: white;
-  text-shadow: 2px 2px #FB4F14;
+  text-shadow: 2px 2px black;
 }
 
 .property-image {
@@ -199,14 +200,15 @@ li{
   padding: 20px;
 }
 
-.property-images {
-
+#property-images {
+  margin: 0px;
+  display: inline-block;
 }
 
 .avatar img{
   width: 500px;
   height: 332px;
-  border-radius: 5px;
+  border-radius: 40px;
 }
 
 .avatar {
@@ -219,7 +221,6 @@ li{
 
 .information{
   background-color: white;
-  margin: 27px;
 }
 .userInfo{
   background-color: white;
@@ -230,6 +231,8 @@ li{
 
 .modalStyle img{
   border-radius: 5px;
+  max-height: 232px;
+  max-width: 350px;
 }
 
 .feature {
@@ -252,6 +255,33 @@ li{
   cursor: pointer;
 }
 
-div{
-  display: inline-block;
+.property-list img{
+  max-height: 80px;
+  max-width: 120px;
+  border: solid 2px darkgray;
+  padding: 0px;
+
+}
+.property-list :hover{
+  background-color: lightgray;
+  cursor: pointer;
+  padding: 0px;
+}
+
+.texty{
+  text-align: center;
+}
+
+.property-list legend{
+  margin: 0px;
+}
+
+button.glyphicon {
+  border-radius: 10px;
+}
+
+
+.glassman{
+  max-height: 300px;
+  max-width: 350px;
 }

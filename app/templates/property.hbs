@@ -1,28 +1,31 @@
+
 <div class="container">
   <div class="row">
-    <div class="col-sm-5 col-sm-offset-1 col-md-7 col-md-offset-1 jumbotron">
-      <legend><h3><strong>Type</strong>: {{model.type}}</h3></legend>
-      {{model.description}}
+    <h3>
+      <strong><legend><center>{{model.property.address}}<br>
+      </center></legend></strong>
+    </h3>
+    <div class="jumbotron information" class="col-md-6">
+      <legend><h3><strong>Type</strong>: {{model.property.type}}</h3></legend>
 
-      <legend><h3><strong>Location:</strong> {{#link-to 'location' model.location.id}}{{model.location.name}}{{/link-to}}</h3></legend>
+      {{description-compon model=model.property}}
+
+      <legend><h3><strong>Location:</strong>
+        {{#link-to 'location' model.property.location.id}}
+          {{model.property.location.name}}
+        {{/link-to}}
+      </h3></legend>
+
       <div class="features">
         <h3>Features:</h3>
-          {{#each model.features as |feature|}}
+          {{#each model.property.features as |feature|}}
             <span class="feature">{{feature}}</span>
           {{/each}}
       </div>
     </div>
     <br>
-    <div class="col-sm-6 col-md-4 property-images" >
-      <ul>
-        {{#each model.images as |image|}}
-          <li>
-            <img src={{image}}>
-          </li>
-        {{/each}}
-      </ul>
-      
-      {{property-map model=model}}
-    </div>
-  </div>
-</div>
+    {{carousel-component images=model.property.images}}
+    <br>
+     {{calendar-tile user=model.user}}
+   </div>
+ </div>

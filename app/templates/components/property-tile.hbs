@@ -1,7 +1,8 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-default" data-toggle="modal" data-target="#property_{{property.id}}">
-  {{property.type}} in {{property.location.name}}
-</button><br>
+<div class='property-list' data-toggle="modal" data-target="#property_{{property.id}}">
+  <legend><h3><img src={{property.images.firstObject}}>   {{property.type}} in {{property.location.name}}</h3></legend>
+</div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="property_{{property.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -13,13 +14,13 @@
       </div>
       <div data-dismiss="modal">
         {{#link-to 'property' property.id}}
-          <div class=" modalStyle">
+          <div class="modalStyle">
             <ul>
               <li>
                 <img src={{property.images.firstObject}}><br>
               </li>
                 <div class="modal-body">
-                  /* once the description property is all ready to go this will be replaced */<p>Y'all ready to see some real shit, look at this fucking rooftop garden, honestly it could drive a green thumb mutha fucka insane just at the sight of all the produce that could be grown here, Y'all better know that im being honest this shit is off the hook!!!! Honestly you thought I was done until I realized how much more organic fucking dime pieces that you can get off just by having everything ready to go. It'll blow your damn mind I'd be too fussed to figure out how important it is for you to be a farmer here and what we could do to really make this happen! I'll Drop the price big time yo I am so down to get you a good deal not for me to make money but for you just to have to opportunity to grow your produce in such a ridiculously insane location I'M BEING HONEST HIT ME UP YOOO!</p>
+                  {{property.description}}
                 </div>
             </ul>
           </div>

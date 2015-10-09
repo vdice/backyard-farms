@@ -8,7 +8,7 @@ export default Ember.Route.extend({
     editProperty: function(params, property){
       Object.keys(params).forEach(function(key){
         if(params[key] !== undefined){
-          property[key] = params[key];
+          property.set(key, params[key]);
         }
       });
       property.save();
