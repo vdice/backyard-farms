@@ -7,7 +7,6 @@ export default Ember.Route.extend({
   showUploader: false,
   actions: {
     uploadFile(user, base64Img){
-    debugger;
       user.set('avatar', base64Img);
       user.save();
       this.transitionTo('user', user.id);
@@ -18,7 +17,6 @@ export default Ember.Route.extend({
       this.transitionTo('user', user.id)
     },
     showDaUpload() {
-      debugger;
       this.set('showUploader', true);
     },
   }
