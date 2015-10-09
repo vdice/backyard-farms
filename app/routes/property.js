@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   model(params) {
     var uid = this.get('session').content.uid;
     return Ember.RSVP.hash({
-      user: this.store.findRecord('user', uid),
+      user: uid ? this.store.findRecord('user', uid) : 'Anonymous',
       property: this.store.findRecord('property', params.property_id)
     });
   }
